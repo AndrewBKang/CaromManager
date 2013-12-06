@@ -1,0 +1,19 @@
+<div class="navbar">
+	<ul class="leftnav">
+		<li class="info" id="news"><a href="#">News</a></li>
+		<li class="info" id="menu"><a href="#">Menu</a></li>
+		<li class="info" id="league"><a href="#">League</a></li>
+		<li class="info" id="about"><a href="#">About</a></li>
+	</ul>
+	<ul class="rightnav">
+		<% unless user_signed_in? %>
+		<li class="option" id="login"><a href="#">Log in</a></li>
+		<li class="option" id="sign up"><a href="#">Sign up</a></li>
+		<% else %>
+		<li class="option" id="profile"><a href="#">Profile</a></li>
+		<li class="option" id="logout"><a href="#">Log out</a></li>
+		<% end %>
+	</ul>
+</div>
+
+<figure class="banner"></figure>
