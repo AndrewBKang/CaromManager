@@ -5,8 +5,10 @@
 section {
 	padding-left:10%;
 	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	color:#404040;
+	padding-bottom:50px;
 	
-	div {
+	.welcome-header {
 		display:block;
 		border-bottom:1px solid lightgray;
 		min-width:650px;
@@ -16,7 +18,7 @@ section {
 			width:150px;
 		}
 		
-		ul {
+		.welcome-nav {
 			float:right;
 			display:inline-block;
 			margin-left:25px;
@@ -26,7 +28,6 @@ section {
 				padding:0px 25px;
 				
 				a {
-					color:#404040;
 					text-decoration:none;
 					position:relative;
 					top:25px;
@@ -34,6 +35,18 @@ section {
 				
 				a:hover {
 					text-decoration:underline;
+				}
+			}
+		}
+	}
+	
+	.content {
+		.welcome-info {
+			li {
+				h3 {
+				}
+				p {
+					color:black;
 				}
 			}
 		}
