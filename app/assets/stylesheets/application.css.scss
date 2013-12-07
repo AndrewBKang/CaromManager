@@ -59,8 +59,9 @@ html, body, div, ul, li, p, figure {
 }
 
 .banner {
-	height:125px;
 	width:100%;
+	height:125px;
+	min-width:540px;
 	background-image: url(image_path('CoverPicWeb.jpeg'));
 	background-size:100%;
 	background-repeat:no-repeat;
