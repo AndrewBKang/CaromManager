@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-section {
+.main {
 	padding-left:10%;
 	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	color:#404040;
@@ -31,6 +31,7 @@ section {
 					text-decoration:none;
 					position:relative;
 					top:25px;
+					color:#404040;
 				}
 				
 				a:hover {
