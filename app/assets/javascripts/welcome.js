@@ -56,4 +56,5 @@ function calcRoute() {
 	
 }
 
+google.maps.event.addDomListener(window, 'page:load', initialize);
 google.maps.event.addDomListener(window, 'load', initialize);
