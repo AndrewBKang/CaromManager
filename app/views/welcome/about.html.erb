@@ -1,18 +1,20 @@
 <div class="welcome-header">
 	<h1>Carom Café</h1>
 	<ul class="welcome-nav">
-		<li><a id="address" href="#">Address</a></li>
-		<li><a id="tables" href="#">Tables</a></li>
-		<li><a id="specials" href="#">Specials</a></li>
-		<li><a id="contact" href="#">Contact</a></li>
+		<li><a class="anchor" name="1" href="#">Location</a></li>
+		<li><a class="anchor" name="2" href="#">Tables</a></li>
+		<li><a class="anchor" name="3" href="#">Specials</a></li>
+		<li><a class="anchor" name="4" href="#">Contact</a></li>
 	</ul>
 </div>
 
 <div class="content">
 	<ul class="welcome-info">
-		<li>
+		<li id="1">
 			<h3>Location & Hours</h3>
-			<div id="directions-panel"></div>
+			<div id="directions-panel">M-Th 9am-3am<br>
+				F-Su 9am-4am
+			</div>
 			<div id="map-canvas"></div>
 			<form id="directions" onsubmit="calcRoute();event.preventDefault();">
 				Directions From: <input type="text" name="origin" id="origin" size="35">
@@ -21,15 +23,15 @@
 				<input type="submit" value="Get Directions">
 			</form>
 		</li>
-		<li>
+		<li id="2">
 			<h3>Table Information</h3>
 			<p>table information</p>
 		</li>
-		<li>
+		<li id="3">
 			<h3>Specials & Promotions</h3>
 			<p>store specials</p>
 		</li>
-		<li>
+		<li id="4">
 			<h3>Contact</h3>
 			<p>phone no. & form for messages</p>
 		</li>

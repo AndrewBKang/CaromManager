@@ -1,3 +1,6 @@
+$(document).ready(function(){
+
+// GOOGLE MAPS API
 var map;
 var directionsDisplay;
 var directionsService = new google.maps.DirectionsService();
@@ -23,7 +26,7 @@ function initialize() {
 }
 
 function calcRoute() {
-	
+	$('#directions-panel').empty();
 	marker.setMap(null);
 	
   var start = document.getElementById("origin").value;
@@ -49,12 +52,28 @@ function calcRoute() {
 	      directionsDisplay.setDirections(result);
 	    }
 	  });
-		
 	});
-	
 	$('#directions-panel').css('border','1px solid lightgray');
-	
 }
 
 google.maps.event.addDomListener(window, 'page:load', initialize);
 google.maps.event.addDomListener(window, 'load', initialize);
+
+// END GOOGLE MAPS API
+
+// ANCHORS
+
+function scrollToAnchor(aid) {
+	var aTag = $('li[id=' + aid + ']').first();
+	$('html,body').animate({scrollTop: aTag.offset().top}, 'slow');
+}
+
+$('.anchor').on('click', function(){
+	var id = $(this).attr('name');
+	scrollToAnchor(id);
+	return false;
+});
+
+// END ANCHORS
+
+});
