@@ -65,7 +65,7 @@ $(document).ready(function(){
 
 function scrollToAnchor(aid) {
 	var aTag = $('li[id=' + aid + ']').first();
-	$('html,body').animate({scrollTop: aTag.offset().top});
+	$('html,body').animate({scrollTop: aTag.offset().top - 78});
 }
 
 $('.anchor').on('click', function(){
@@ -75,5 +75,19 @@ $('.anchor').on('click', function(){
 });
 
 // END ANCHORS
+
+// FIX about navigation on scroll
+
+
+$(function () {
+	var top = $('.welcome-header').offset().top - parseFloat($('.welcome-header').css('margin-top').replace(/auto/,0));
+
+	$(window).scroll(function (event) {
+		var y = $(this).scrollTop();
+		if (y >= top) {$('.welcome-header').addClass('fixed');} else {$('.welcome-header').removeClass('fixed');}
+	});
+});
+
+// END FIX ON SCROLL
 
 });

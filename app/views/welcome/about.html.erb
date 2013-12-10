@@ -1,3 +1,4 @@
+<div class="welcome-container">
 <div class="welcome-header">
 	<h1>Carom Café</h1>
 	<ul class="welcome-nav">
@@ -7,20 +8,30 @@
 		<li><a class="anchor" name="4" href="#">Contact</a></li>
 	</ul>
 </div>
+</div>
 
 <div class="content">
 	<ul class="welcome-info">
 		<li id="1">
 			<h3>Location & Hours</h3>
-			<div id="directions-panel">M-Th 9am-3am<br>
-				F-Su 9am-4am
+			<div id="directions-panel">
+				<div class="address-hours">
+					<strong>Address:</strong> <br>
+					Carom Café Billiards<br>
+					34-02 Linden Pl. <br> 
+					Flushing, NY 11354 <br>
+					<br> 
+					<strong>Business Hours:</strong> <br> 
+					Sunday-Thursday 9am-3am<br>
+					Friday-Saturday 9am-4am<br>
+					365 days/year
+				</div>
 			</div>
 			<div id="map-canvas"></div>
 			<form id="directions" onsubmit="calcRoute();event.preventDefault();">
-				Directions From: <input type="text" name="origin" id="origin" size="35">
+				<input type="text" name="origin" id="origin" size="25" placeholder="Directions From...">
 				<input type="radio" name="transport-mode" value="DRIVING" checked="checked">Driving
 				<input type="radio" name="transport-mode" value="TRANSIT">Transit
-				<input type="submit" value="Get Directions">
 			</form>
 		</li>
 		<li id="2">
