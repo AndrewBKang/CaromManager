@@ -65,7 +65,7 @@ $(document).ready(function(){
 
 function scrollToAnchor(aid) {
 	var aTag = $('li[id=' + aid + ']').first();
-	$('html,body').animate({scrollTop: aTag.offset().top}, 'slow');
+	$('html,body').animate({scrollTop: aTag.offset().top});
 }
 
 $('.anchor').on('click', function(){
