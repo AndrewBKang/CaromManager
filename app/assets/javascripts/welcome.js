@@ -1,5 +1,3 @@
-$(document).ready(function(){
-
 // GOOGLE MAPS API
 var map;
 var directionsDisplay;
@@ -61,6 +59,8 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 // END GOOGLE MAPS API
 
+$(document).ready(function(){
+	
 // ANCHORS
 
 function scrollToAnchor(aid) {
