@@ -19,6 +19,10 @@ html, body, div, ul, li, p, figure {
 	list-style-type:none;
 }
 
+html, body {
+	height:100%;
+}
+
 .navbar {
 	width:100%;
 	min-width:500px;

@@ -11,8 +11,15 @@
 <div class="content">
 	<ul class="welcome-info">
 		<li>
-			<h3>Address & Hours</h3>
-			<p>google maps api</p>
+			<h3>Location & Hours</h3>
+			<div id="directions-panel"></div>
+			<div id="map-canvas"></div>
+			<form id="directions" onsubmit="calcRoute();event.preventDefault();">
+				Directions From: <input type="text" name="origin" id="origin" size="48">
+				<input type="radio" name="transport-mode" value="DRIVING" checked="checked">Driving
+				<input type="radio" name="transport-mode" value="TRANSIT">Transit
+				<input type="submit" value="Get Directions">
+			</form>
 		</li>
 		<li>
 			<h3>Table Information</h3>
