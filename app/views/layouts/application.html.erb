@@ -8,17 +8,8 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	
 	<section class="container">
-		<%= render "shared/navigation"%>
-		
-			<p class="notice"><%= notice %></p>
-		  <p class="alert"><%= alert %></p>
-		
-		<section class="main">
-			<%= yield %>
-		</section>
-	
+		<%= yield %>
 	</section>
 </body>
 </html>
