@@ -1,15 +1,15 @@
 <div class="navbar">
 	<ul class="leftnav">
-		<li class="info" id="logo"><a href="about"><img src="/assets/CaromCafeLogo2013.png" width="80" height="20" alt="CaromCafeLogo2013"></a></li>
-		<li class="info" id="news"><a href="news">News</a></li>
+		<li class="info" id="logo"><a href="/about"><img src="/assets/CaromCafeLogo2013.png" width="80" height="20" alt="CaromCafeLogo2013"></a></li>
+		<li class="info" id="news"><a href="/news">News</a></li>
 		<li class="info" id="menu"><a href="#">Menu</a></li>
 		<li class="info" id="league"><a href="#">League</a></li>
-		<li class="info" id="about"><a href="about">About</a></li>
+		<li class="info" id="about"><a href="/about">About</a></li>
 	</ul>
 	<ul class="rightnav">
 		<% unless user_signed_in? %>
-		<li class="option" id="login"><a href="#">Log in</a></li>
-		<li class="option" id="sign up"><a href="#">Sign up</a></li>
+		<li class="option" id="login"><a href="/login">Log in</a></li>
+		<li class="option" id="sign up"><a href="/signup">Sign up</a></li>
 		<% else %>
 		<li class="option" id="profile"><a href="#">Profile</a></li>
 		<li class="option" id="logout"><a href="#">Log out</a></li>

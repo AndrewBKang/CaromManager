@@ -24,12 +24,12 @@ function initialize() {
 }
 
 function calcRoute() {
-	$('#directions-panel').empty();
+	$('.address-hours').addClass('hidden');
 	marker.setMap(null);
 	
   var start = document.getElementById("origin").value;
 	var startURL = 'http://maps.googleapis.com/maps/api/geocode/json?address=' + start + '&sensor=false';
-	var startLatLng = carom;
+	var startLatLng;
 	var selectedMode = $('input[name="transport-mode"]:checked').val();
 
 	$.getJSON(startURL,function(data){
@@ -37,6 +37,10 @@ function calcRoute() {
 			var startLat = data.results[0].geometry.location.lat;
 			var startLng = data.results[0].geometry.location.lng;
 			startLatLng = new google.maps.LatLng(startLat, startLng);
+		} else {
+			$('.address-hours').removeClass('hidden');
+			$('#directions-panel').css('border','1px solid white');
+			$('.adp').remove();
 		}
 		
 	  var request = {
@@ -77,7 +81,6 @@ $('.anchor').on('click', function(){
 // END ANCHORS
 
 // FIX about navigation on scroll
-
 
 $(function () {
 	var top = $('.welcome-header').offset().top - parseFloat($('.welcome-header').css('margin-top').replace(/auto/,0));

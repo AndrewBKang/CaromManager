@@ -7,6 +7,13 @@ CustomerManager::Application.routes.draw do
   root 'welcome#news'
   get 'about' => 'welcome#about', as: :about
   get 'news' => 'welcome#news', as: :news
+  
+  devise_scope :user do 
+    get 'login' => 'devise/sessions#new'
+    get 'signup' => 'devise/registrations#new'
+    get 'new_password' => 'devise/passwords#new'
+    get 'confirmation_resend' => 'devise/confirmations#new'
+  end
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

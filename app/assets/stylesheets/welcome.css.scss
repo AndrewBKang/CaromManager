@@ -33,7 +33,7 @@
 					a {
 						text-decoration:none;
 						position:relative;
-						top:25px;
+						top:20px;
 						color:#404040;
 					}
 				
@@ -59,15 +59,10 @@
 }
 
 #directions {
-	display:block;
 	position:relative;
 	height:0;
 	top:-290px;
 	left:40px;
-	font-size:15px;
-	font-family: Roboto,Arial,sans-serif;
-	font-style:normal;
-	font-weight:300;
 	
 	#origin {
 		-webkit-box-shadow: 3px 3px 15px 0px rgba(105,105,105,1);
@@ -93,6 +88,11 @@
 	position:relative;
 	left:-1px;
 	border:1px solid white;
+	
+	.address-hours {
+		padding-top:25px;
+		padding-left:25px;
+	}
 }
 
 #map-canvas {
