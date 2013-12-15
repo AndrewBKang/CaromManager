@@ -1,0 +1,122 @@
+//DEVISE DOWN HERE
+
+.logo {
+	width:175px;
+	margin:30px auto;
+}
+
+.devise-coat {
+	background-color: #f7f7f7;
+	border-radius:3px;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.devise-container {
+	width:275px;
+	padding:40px;
+	padding-bottom:20px;
+	margin:50px auto;
+	font-size:14px;
+
+	figure {
+		border-radius:48px;
+		overflow:hidden;
+		margin:auto;
+		width:96px;
+	}
+	form {
+		margin:20px 0;
+		input {
+			box-sizing:border-box;
+			width:100%;
+		}
+		#user_remember_me {
+			width:inherit;
+		}
+		#remember {
+			float:left;
+			label {
+				font-size:14px;
+			}
+		}
+	}
+	.devise-help-links {
+		height:0;
+		position:relative;
+		top:-20px;
+		float:right;
+	}
+	a {
+		color:#427fed;
+		text-decoration:none;
+	}
+	a:hover {
+		text-decoration:underline;
+	}
+	
+	.links-container {
+		border-top:1px solid rgba(0, 0, 0, 0.07);
+		position:absolute;
+		width:139px;
+		text-align:left;
+		padding:10px;
+		margin-top:-15px;
+		margin-left:116px;
+	}
+	
+	.sign-links {
+		height:0;
+		position:relative;
+		display:block;
+		text-align:center;
+		margin:auto;
+		top:40px;
+	}
+}
+
+
+//Devise Error Explanations
+
+#error_explanation {
+	display:inline-block;
+	border-radius:10px;
+	
+	h2 {
+		display:none;
+	}
+	
+	ul {
+		
+		li {
+			color:#dd4b39;;
+		}
+	}
+}
+
+.field_with_errors {
+	display:inline-block;
+	input {
+		padding:2px;
+		border:1px solid #dd4b39;
+	}
+}
+
+// Devise Submit Button
+
+.devise-submit {
+	margin-top:10px;
+	font-family: Arial, sans-serif;
+	color:white;
+	text-shadow: 0 1px rgba(0,0,0,0.1);
+	border-radius:3px;
+	font-weight:700;
+	font-size:14px;
+	background: #20c906; /* Old browsers */
+	background: -moz-linear-gradient(top, #20c906 0%, #42b240 65%, #52a049 99%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#20c906), color-stop(65%,#42b240), color-stop(99%,#52a049)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #20c906 0%,#42b240 65%,#52a049 99%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #20c906 0%,#42b240 65%,#52a049 99%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #20c906 0%,#42b240 65%,#52a049 99%); /* IE10+ */
+	background: linear-gradient(to bottom, #20c906 0%,#42b240 65%,#52a049 99%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#20c906', endColorstr='#52a049',GradientType=0 ); /* IE6-9 */
+}

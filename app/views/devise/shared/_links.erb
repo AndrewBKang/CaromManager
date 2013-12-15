@@ -1,21 +1,14 @@
 <a class="devise-help-links" href="#">Need Help?</a><br>
 
 
-<div class="links-container">
-<%- if controller_name != 'sessions' %>
-  <%= link_to "Log in", '/login' %><br />
-<% end -%>
-
-<%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-  <%= link_to "Sign up", '/signup' %><br />
-<% end -%>
+<div class="links-container devise-coat hidden">
 
 <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
   <%= link_to "Forgot password?", '/new_password' %><br />
 <% end -%>
 
 <%- if devise_mapping.confirmable? && controller_name != 'confirmations' %>
-  <%= link_to "Didn't receive confirmation instructions?", '/confirmation_resend' %><br />
+  <%= link_to "Resend confirmation?", '/confirmation_resend' %><br />
 <% end -%>
 
 <%- if devise_mapping.lockable? && resource_class.unlock_strategy_enabled?(:email) && controller_name != 'unlocks' %>
@@ -26,5 +19,16 @@
   <%- resource_class.omniauth_providers.each do |provider| %>
     <%= link_to "Sign in with #{provider.to_s.titleize}", omniauth_authorize_path(resource_name, provider) %><br />
   <% end -%>
+<% end -%>
+
+</div>
+
+<div class="sign-links">
+<%- if controller_name == 'registrations' %>
+  <%= link_to "Log in existing account", '/login' %>
+<% end -%>
+
+<%- if controller_name == 'sessions' %>
+  <%= link_to "Create an account", '/signup' %>
 <% end -%>
 </div>

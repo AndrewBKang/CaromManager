@@ -80,7 +80,7 @@ $('.anchor').on('click', function(){
 
 // END ANCHORS
 
-// FIX about navigation on scroll
+// css:fix 'ABOUT' page navigation on scroll
 
 $(function () {
 	var top = $('.welcome-header').offset().top - parseFloat($('.welcome-header').css('margin-top').replace(/auto/,0));
@@ -91,6 +91,6 @@ $(function () {
 	});
 });
 
-// END FIX ON SCROLL
+// END css:fix
 
 });
