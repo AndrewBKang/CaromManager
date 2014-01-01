@@ -16,7 +16,7 @@
 	padding:40px;
 	padding-bottom:20px;
 	margin:50px auto;
-	font-size:14px;
+	font-size:13px;
 
 	figure {
 		border-radius:48px;
@@ -36,14 +36,14 @@
 		#remember {
 			float:left;
 			label {
-				font-size:14px;
+				font-size:13px;
 			}
 		}
 	}
 	.devise-help-links {
 		height:0;
 		position:relative;
-		top:-20px;
+		top:-18px;
 		float:right;
 	}
 	a {
@@ -96,7 +96,6 @@
 .field_with_errors {
 	display:inline-block;
 	input {
-		padding:2px;
 		border:1px solid #dd4b39;
 	}
 }
