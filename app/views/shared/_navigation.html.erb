@@ -1,18 +1,42 @@
 <div class="navbar">
 	<ul class="leftnav">
-		<li class="info" id="logo"><a href="/about"><img src="/assets/CaromCafeLogo2013.png" width="80" height="20" alt="CaromCafeLogo2013"></a></li>
-		<li class="info" id="news"><a href="/news">News</a></li>
-		<li class="info" id="menu"><a href="#">Menu</a></li>
-		<li class="info" id="league"><a href="#">League</a></li>
-		<li class="info" id="about"><a href="/about">About</a></li>
+		<li class="info" id="logo">
+			<a href="/about">
+				<img src="/assets/CaromCafeLogo2013.png" width="140" height="35" alt="CaromCafeLogo2013">
+			</a>
+		</li>
+		<li class="info" id="news">
+			<a class="hoverable" title="news" href="/news">
+				<i class="icon-doc"></i>
+			</a>
+		</li>
+		<li class="info" id="league">
+			<a class="hoverable" title="league" href="#">
+				<i class="icon-calendar"></i>
+			</a>
+		</li>
+		<li class="info" id="menu">
+			<a class="hoverable" title="menu" href="#">
+				<i class="icon-glass"></i>
+			</a>
+		</li>
+		<li class="info" id="about">
+			<a class="hoverable" title="about" href="/about">
+				<i class="icon-info-circled-1"></i>
+			</a>
+		</li>
 	</ul>
 	<ul class="rightnav">
 		<% unless user_signed_in? %>
-		<li class="option" id="login"><a href="/login">Log in</a></li>
-		<li class="option" id="sign up"><a href="/signup">Sign up</a></li>
+		<li class="option" id="login">
+			<a class="devise-submit link-to-devise-button" name="commit" type="submit" href="/login">Sign in</a>
+		</li>
+		<!-- <li class="option" id="sign up"><a href="/signup">Sign up</a></li> -->
 		<% else %>
-		<li class="option" id="profile"><a href="#">Profile</a></li>
-		<li class="option" id="logout"><a href="/users/sign_out" data-method="delete">Log out</a></li>
+		<li class="option" id="profile"><a href="#">profile</a></li>
+		<li class="option" id="logout">
+			<a class="devise-submit link-to-devise-button" href="/users/sign_out" data-method="delete">Log out</a>
+		</li>
 		<% end %>
 	</ul>
 </div>

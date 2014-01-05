@@ -28,27 +28,36 @@ html, body {
 
 .navbar {
 	width:100%;
-	height:20px;
+	height:35px;
 	padding:15px 0;
 	
 	.leftnav {
 		float:left;
 		padding-left:15px;
-		height:20px;
+		height:35px;
 		
 		#logo {
-			width:80px;
-			margin-right: 10px;
+			padding-right:15px;
 			
 			a {
-				height:20px;
+				height:35px;
 				width:80px;
 				background-repeat:no-repeat;
 				overflow:visible;
-				
+				-webkit-transition: opacity .15s ease-in-out;
+			  -moz-transition: opacity .15s ease-in-out;
+			  -ms-transition: opacity .15s ease-in-out;
+			  -o-transition: opacity .15s ease-in-out;
+			  transition: opacity .15s ease-in-out;
+			
 				img {
-					vertical-align:-3px;
+					vertical-align:-9px;
 				}
+			}
+			
+			a:hover {
+				opacity:.7;
+				text-decoration:none;
 			}
 		}
 	}
@@ -56,19 +65,27 @@ html, body {
 	.rightnav {
 		float:right;
 		padding-right:15px;
+		height:35px;
+		
+		li {
+			height:35px;
+			a {
+				vertical-align:-6px;
+				margin:0;
+			}
+		}
 	}
 	
 	ul {
+		height:35px;
 		
 		li {
 			display:inline;
 			
 			a {
-				color:#404040;
 				text-decoration:none;
 				font-family: arial,sans-serif;
 				font-size:medium;
-				font-weight:0;
 				margin:0 10px;
 			}
 			
@@ -76,6 +93,41 @@ html, body {
 				text-decoration:underline;
 			}
 			
+			.hoverable {
+				color:black;
+				-webkit-transition: all 0.2s ease-in-out;
+			}
+
+			.hoverable:hover {
+			  color: gray;
+			  -webkit-transition: all 0.2s ease-in-out;
+				text-decoration:none;
+			}
+			
+			.link-to-devise-button {
+				padding:7px 12px;
+				text-align:center;
+				
+				color:white;
+				font-weight:600;
+				font-size:14px;
+			}
+			
+			.link-to-devise-button:hover {
+				text-decoration:none;
+				cursor:pointer;
+			}
+			
+			.link-to-devise-button:active {
+				background: #2aaf05; /* Old browsers */
+				background: -moz-linear-gradient(top, #2aaf05 0%, #398e33 65%, #45843c 100%); /* FF3.6+ */
+				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2aaf05), color-stop(65%,#398e33), color-stop(100%,#45843c)); /* Chrome,Safari4+ */
+				background: -webkit-linear-gradient(top, #2aaf05 0%,#398e33 65%,#45843c 100%); /* Chrome10+,Safari5.1+ */
+				background: -o-linear-gradient(top, #2aaf05 0%,#398e33 65%,#45843c 100%); /* Opera 11.10+ */
+				background: -ms-linear-gradient(top, #2aaf05 0%,#398e33 65%,#45843c 100%); /* IE10+ */
+				background: linear-gradient(to bottom, #2aaf05 0%,#398e33 65%,#45843c 100%); /* W3C */
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2aaf05', endColorstr='#45843c',GradientType=0 ); /* IE6-9 */
+			}
 		}
 	}
 }
